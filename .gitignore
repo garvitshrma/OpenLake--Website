@@ -11,3 +11,4 @@ tsconfig.tsbuildinfo
 .vscode/
 .vercel
 .env*.local
+.freebuff/

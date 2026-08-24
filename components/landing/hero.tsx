@@ -473,7 +473,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/backImg2.webp"
+            src="/assets/backImg6.webp"
             bbX={-185}
             bbY={225}
             bbW={390}
@@ -512,7 +512,7 @@ export function HeroSection() {
             parallaxRate={0.07}
           />
           <Photo
-            src="/assets/backImg5.webp"
+            src="/assets/backImg6.webp"
             bbX={-95}
             bbY={610}
             bbW={390}
@@ -567,7 +567,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/backImg9.webp"
+            src="/assets/backImg9.jpg"
             bbX={1710}
             bbY={230}
             bbW={390}
@@ -595,7 +595,7 @@ export function HeroSection() {
             parallaxRate={0.09}
           />
           <Photo
-            src="/assets/backImg11.webp"
+            src="/assets/backImg11.jpg"
             bbX={1665}
             bbY={500}
             bbW={390}
