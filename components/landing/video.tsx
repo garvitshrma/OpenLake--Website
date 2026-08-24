@@ -10,9 +10,9 @@ const backImgsBase = [
   "/assets/backImg6.webp",
   "/assets/backImg7.webp",
   "/assets/backImg8.webp",
-  "/assets/backImg9.webp",
+  "/assets/backImg9.jpg",
   "/assets/backImg10.webp",
-  "/assets/backImg11.webp",
+  "/assets/backImg11.jpg",
   "/assets/backImg12.webp",
   "/assets/backImg13.webp",
 ];
@@ -54,7 +54,7 @@ export function VideoSection() {
         }}
       >
         <img
-          src="/assets/backImg.webp"
+          src="/assets/backImg.png"
           alt=""
           width={1920}
           height={1280}
