@@ -109,6 +109,7 @@ function Member({
         style={{
           display: "flex",
           gap: "16px",
+          flexShrink: 0,
         }}
       >
         {github && (
@@ -488,18 +489,22 @@ function Member2024({
       style={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
+        gap: "12px",
         padding: "16px 20px",
+        paddingLeft: "clamp(20px, 8vw, 130px)",
         borderBottom: "1px solid var(--border)",
       }}
     >
       {/* Name */}
       <span
         style={{
-          width: "280px",
+          flex: 1,
+          minWidth: 0,
+          overflowWrap: "anywhere",
           fontSize: "18px",
           fontWeight: 600,
           color: "var(--foreground)",
-          marginLeft: "110px",
         }}
       >
         {name}
@@ -510,6 +515,7 @@ function Member2024({
         style={{
           display: "flex",
           gap: "14px",
+          flexShrink: 0,
         }}
       >
         <a href={github} target="_blank" rel="noopener noreferrer">
@@ -538,14 +544,18 @@ function Coordinator2024({
       style={{
         display: "flex",
         alignItems: "center",
-        padding: "16px 40px",
+        justifyContent: "space-between",
+        gap: "12px",
+        padding: "16px clamp(16px, 5vw, 40px)",
         borderBottom: "1px solid var(--border)",
       }}
     >
       {/* Name */}
       <span
         style={{
-          width: "380px",
+          flex: 1,
+          minWidth: 0,
+          overflowWrap: "anywhere",
           fontSize: "18px",
           fontWeight: 600,
           color: "var(--foreground)",
@@ -560,6 +570,7 @@ function Coordinator2024({
         style={{
           display: "flex",
           gap: "14px",
+          flexShrink: 0,
         }}
       >
         <a href={github} target="_blank" rel="noopener noreferrer">
@@ -690,16 +701,11 @@ export default function PastCommunityPageClient() {
           </div>
 
           {/* Mentors & Maintainers */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "40px",
-            }}
-          >
+          <div className="pc-duo-grid">
             {/* Mentors */}
             <div
               style={{
+                minWidth: 0,
                 background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
@@ -725,6 +731,7 @@ export default function PastCommunityPageClient() {
             {/* Maintainers */}
             <div
               style={{
+                minWidth: 0,
                 background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
@@ -810,8 +817,8 @@ export default function PastCommunityPageClient() {
             }}
           >
             <div
+              className="pc-card-narrow"
               style={{
-                width: "60%",
                 margin: "0 auto",
                 background: "var(--surface)",
                 borderRadius: "18px",
@@ -897,8 +904,8 @@ export default function PastCommunityPageClient() {
             }}
           >
             <div
+              className="pc-card-narrow"
               style={{
-                width: "60%",
                 margin: "0 auto",
                 background: "var(--surface)",
                 borderRadius: "18px",
@@ -984,8 +991,8 @@ export default function PastCommunityPageClient() {
             }}
           >
             <div
+              className="pc-card-narrow"
               style={{
-                width: "60%",
                 margin: "0 auto",
                 background: "var(--surface)",
                 borderRadius: "18px",
@@ -1071,8 +1078,8 @@ export default function PastCommunityPageClient() {
             }}
           >
             <div
+              className="pc-card-narrow"
               style={{
-                width: "60%",
                 margin: "0 auto",
                 background: "var(--surface)",
                 borderRadius: "18px",
@@ -1156,8 +1163,8 @@ export default function PastCommunityPageClient() {
             }}
           >
             <div
+              className="pc-card-narrow"
               style={{
-                width: "60%",
                 margin: "0 auto",
                 background: "var(--surface)",
                 borderRadius: "18px",
@@ -1183,6 +1190,22 @@ export default function PastCommunityPageClient() {
           </div>
         </section>
         </div>
+
+        <style>{`
+          .pc-duo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+          }
+          .pc-card-narrow { width: 60%; }
+          @media (max-width: 900px) {
+            .pc-card-narrow { width: 80%; }
+          }
+          @media (max-width: 767px) {
+            .pc-duo-grid { grid-template-columns: 1fr; gap: 24px; }
+            .pc-card-narrow { width: 100%; }
+          }
+        `}</style>
       </main>
       <Footer />
     </>
