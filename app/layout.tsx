@@ -26,6 +26,8 @@ const organizationJsonLd = {
     "https://github.com/OpenLake",
     "https://www.youtube.com/@openlakeiitbhilai1724",
     "https://www.instagram.com/openlake_iitbhilai/",
+    "https://www.linkedin.com/company/openlake/",
+    "https://x.com/OpenLakeClub",
   ],
 };
 

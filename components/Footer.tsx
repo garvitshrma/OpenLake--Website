@@ -42,6 +42,16 @@ const icons = [
     href: "https://www.instagram.com/openlake_iitbhilai/",
     glyph: "instagram",
   },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/openlake/",
+    glyph: "linkedin",
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/OpenLakeClub",
+    glyph: "twitter",
+  },
   { label: "Email", href: "mailto:openlake@iitbhilai.ac.in", glyph: "email" },
 ];
 
@@ -192,7 +202,10 @@ export function Footer() {
           >
             openlake@iitbhilai.ac.in
           </a>
-          <div style={{ display: "flex", gap: 12 }}>
+          <div
+            className="footer-social-row"
+            style={{ display: "flex", flexWrap: "wrap", gap: 12 }}
+          >
             {icons.map((i) => (
               <a
                 key={i.label}
@@ -262,6 +275,9 @@ export function Footer() {
         @media (max-width: 767px) {
           .site-footer { padding-top: 120px !important; }
           .site-footer-illustration { width: min(320px, 72vw) !important; transform: translateY(-40%) !important; }
+          .footer-social-row { gap: 8px !important; }
+          .footer-social-link { width: 48px !important; height: 48px !important; }
+          .footer-social-link svg { width: 40px !important; height: 40px !important; }
         }
       `}</style>
     </footer>
