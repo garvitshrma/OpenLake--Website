@@ -6,9 +6,9 @@ import { PageHero, PageSection, SectionTitle, Accent } from "@/components/PageHe
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About OpenLake — the open-source club of IIT Bhilai",
+  title: "About OpenLake — the open-source society of IIT Bhilai",
   description:
-    "OpenLake is the open-source club of IIT Bhilai. We build software the campus actually uses, teach students how to make their first contribution, and send them on to GSoC, LFX and beyond.",
+    "OpenLake is the open-source society of IIT Bhilai. We build software the campus actually uses, teach students how to make their first contribution, and send them on to GSoC, LFX and beyond.",
   canonical: "/philosophy",
 });
 
@@ -24,7 +24,7 @@ export const metadata: Metadata = buildPageMetadata({
 const STATS = [
   { value: "62", label: "Public repositories", note: "on the OpenLake GitHub org" },
   { value: "2020", label: "Building since", note: "Since 6 years" },
-  { value: "9", label: "GSoC contributors", note: "proposals accepted from the club" },
+  { value: "9", label: "GSoC contributors", note: "proposals accepted from the society." },
   { value: "50+", label: "Workshops & programs", note: "run on campus, free to attend" },
 ];
 
@@ -128,7 +128,7 @@ const PROGRAMS = [
 
 // Source: the events list on /newevents.
 const TIMELINE = [
-  { date: "Jun 2022", title: "HTML & CSS tutorial + mini hackathon", note: "The club's first recorded workshop." },
+  { date: "Jun 2022", title: "HTML & CSS tutorial + mini hackathon", note: "The society's first recorded workshop." },
   { date: "Aug 2022", title: "OpenlySourced, with Anand Panchbai", note: "An introduction to contributing." },
   { date: "Jun 2023", title: "How to Open-Source", note: "Tools, and where to contribute globally." },
   { date: "Jan 2025", title: "GSoC: An Introduction", note: "How to write a proposal that gets accepted." },
@@ -297,7 +297,7 @@ export default function Page() {
         badge="✦ About OpenLake"
         title={
           <>
-            The open-source club
+            The open-source society
             <br />
             of <Accent>IIT Bhilai</Accent>.
           </>

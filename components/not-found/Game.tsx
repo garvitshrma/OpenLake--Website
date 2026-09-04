@@ -432,7 +432,7 @@ export function Game() {
               background:
                 radial-gradient(circle at 18% 18%, rgba(40, 169, 226, 0.12), transparent 30%),
                 radial-gradient(circle at 86% 16%, rgba(40, 169, 226, 0.08), transparent 24%),
-                linear-gradient(180deg, var(--deep-900) 0%, var(--deep-950) 100%);
+                linear-gradient(180deg, var(--deep-970) 0%, var(--deep-990) 100%);
             }
 
             .game-overlay__wash {

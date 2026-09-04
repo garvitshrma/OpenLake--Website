@@ -238,8 +238,8 @@ export default async function NotFound() {
 
           html.dark .content-veil {
             background:
-              radial-gradient(circle at top, rgba(17, 42, 65, 0.08), transparent 36%),
-              linear-gradient(180deg, rgba(17, 42, 65, 0.18) 10%, rgba(17, 42, 65, 0.68) 42%, rgba(17, 42, 65, 0.94) 100%);
+              radial-gradient(circle at top, rgba(5, 8, 11, 0.08), transparent 36%),
+              linear-gradient(180deg, rgba(5, 8, 11, 0.18) 10%, rgba(5, 8, 11, 0.68) 42%, rgba(5, 8, 11, 0.94) 100%);
           }
 
           .go-home-btn {

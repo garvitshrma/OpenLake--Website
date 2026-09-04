@@ -35,7 +35,18 @@
   --brand-sky: #28a9e2;
   --brand-paper: #ffffff;
 
-  /* Shades of --brand-deep, for layering dark sections */
+  /* Shades of --brand-deep, for layering dark sections. Same hue (209deg)
+     the whole way down; only lightness moves.
+     The --deep-9xx steps are the always-dark surfaces (--ink-2, hero
+     panels), which render in BOTH modes — do not repoint them to darken
+     dark mode.
+     The three above them are dark mode's own page/card/raised surfaces:
+     near-black, carrying only a trace of the brand hue. At this depth the
+     tonal step between page and card is ~1.08:1, so the border does the
+     separating — see --border below. */
+  --deep-990: #05080b;
+  --deep-970: #0d141a;
+  --deep-930: #1a232c;
   --deep-950: #0c1c2b;
   --deep-900: #112a41;
   --deep-800: #173653; /* = --brand-deep */
@@ -68,14 +79,17 @@
 }
 
 html.dark {
-  --background: var(--deep-900);
+  --background: var(--deep-990);
   --foreground: var(--brand-paper);
-  --surface: var(--deep-800);
-  --surface-hover: var(--deep-700);
-  --border: rgba(255, 255, 255, 0.12);
+  --surface: var(--deep-970);
+  --surface-hover: var(--deep-930);
+  /* On a near-black ground the card/page tonal step is too small to see,
+     so the hairline carries the separation. At .18 it reads at 1.86:1
+     against the page — a touch stronger than GitHub dark's own (1.55:1). */
+  --border: rgba(255, 255, 255, 0.18);
   --muted: rgba(255, 255, 255, 0.72);
   --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --nav-bg: rgba(17, 42, 65, 0.85);
+  --nav-bg: rgba(5, 8, 11, 0.85);
   /* On navy the sky needs no darkening — it reads at 5.1:1. */
   --red: var(--brand-sky);
   --orange: var(--sky-300);
@@ -95,6 +109,14 @@ html.dark {
   --accent-ink: var(--brand-sky);
   --grid-line: rgba(255, 255, 255, 0.1);
   --footer-bg: var(--deep-950);
+}
+
+/* The footer used to be the darkest band on the page. In dark mode the page
+   itself is now near-black, so the footer joins it and its grid lines carry
+   the boundary. Must come after the block above, which sets --footer-bg at
+   equal specificity. Light mode keeps the navy footer. */
+html.dark {
+  --footer-bg: var(--deep-990);
 }
 
 html.dark[data-theme-lock="light"] {
